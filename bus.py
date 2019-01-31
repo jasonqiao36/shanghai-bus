@@ -99,7 +99,7 @@ class Bus(object):
         if stops:
             self.stops = sorted([json.loads(x) for x in stops], key=lambda x: int(x['stop_id']))
         else:
-            for stop_id, station_name in self.stations.iteritems():
+            for stop_id, station_name in self.stations.items():
                 data = {'stoptype': self.stop_type, 'stopid': '{0}.'.format(stop_id), 'sid': self.sid}
                 res = self.session.post(self.stop_url, headers=headers, data=data).json()
                 res = res if isinstance(res, dict) else res[0]

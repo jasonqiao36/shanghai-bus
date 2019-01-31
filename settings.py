@@ -3,7 +3,7 @@
 # redis连接信息
 REDIS_HOST = 'localhost'
 REDIS_PORT = '6379'
-REDIS_PASSWORD = ''
+REDIS_PASSWORD = '123'
 
 # redis缓存时间
 # 缓存SID时间 理论上一部车对应一个SID
